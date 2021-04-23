@@ -1,5 +1,7 @@
 package br.com.zupacademy.samara.casadocodigo.autor;
 
+import br.com.zupacademy.samara.casadocodigo.utils.annotations.EmailUnico;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

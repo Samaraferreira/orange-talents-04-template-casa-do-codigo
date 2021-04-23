@@ -1,5 +1,7 @@
 package br.com.zupacademy.samara.casadocodigo.autor;
 
+import br.com.zupacademy.samara.casadocodigo.utils.annotations.EmailUnico;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -11,6 +13,7 @@ public class AutorRequest {
 
     @NotBlank
     @Email
+    @EmailUnico
     private String email;
 
     @NotBlank
