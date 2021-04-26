@@ -1,6 +1,5 @@
 package br.com.zupacademy.samara.casadocodigo.categoria;
 
-import br.com.zupacademy.samara.casadocodigo.utils.annotations.NomeUnico;
 import br.com.zupacademy.samara.casadocodigo.utils.annotations.UniqueValue;
 
 import javax.validation.constraints.NotBlank;

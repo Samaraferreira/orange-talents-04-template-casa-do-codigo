@@ -1,7 +1,5 @@
 package br.com.zupacademy.samara.casadocodigo.utils.annotations;
 
-import br.com.zupacademy.samara.casadocodigo.categoria.CategoriaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
 import javax.persistence.EntityManager;
