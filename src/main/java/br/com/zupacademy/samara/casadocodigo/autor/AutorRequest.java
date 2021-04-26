@@ -1,6 +1,7 @@
 package br.com.zupacademy.samara.casadocodigo.autor;
 
 import br.com.zupacademy.samara.casadocodigo.utils.annotations.EmailUnico;
+import br.com.zupacademy.samara.casadocodigo.utils.annotations.UniqueValue;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -13,7 +14,7 @@ public class AutorRequest {
 
     @NotBlank
     @Email
-    @EmailUnico
+    @UniqueValue(domainClass = Autor.class, fieldName = "email")
     private String email;
 
     @NotBlank
