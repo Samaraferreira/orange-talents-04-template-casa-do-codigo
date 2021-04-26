@@ -24,7 +24,7 @@ public class Livro {
     @Size(max = 500)
     private String resumo;
 
-    private String sumario;
+    private @NotBlank String sumario;
 
     @NotNull
     @DecimalMin("20")
@@ -50,6 +50,7 @@ public class Livro {
     @NotNull
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Autor autor;
+
 
     @Deprecated
     public Livro() {

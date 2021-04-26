@@ -7,7 +7,6 @@ import br.com.zupacademy.samara.casadocodigo.utils.annotations.UniqueValue;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 import org.hibernate.validator.constraints.ISBN;
-import org.springframework.util.Assert;
 
 import javax.persistence.EntityManager;
 import javax.validation.constraints.*;
@@ -71,13 +70,13 @@ public class LivroRequest {
         Autor autor = manager.find(Autor.class, autorId);
 
         return new Livro(
-                this.titulo,
-                this.resumo,
-                this.sumario,
-                this.preco,
-                this.numeroPaginas,
-                this.isbn,
-                this.dataPublicacao,
+                titulo,
+                resumo,
+                sumario,
+                preco,
+                numeroPaginas,
+                isbn,
+                dataPublicacao,
                 categoria,
                 autor);
     }

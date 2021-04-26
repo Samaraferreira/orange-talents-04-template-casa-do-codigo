@@ -22,7 +22,7 @@ public class LivroController {
 
         entityManager.persist(livro);
 
-        return ResponseEntity.ok().body(livro);
+        return ResponseEntity.ok().build();
     }
 
 }
