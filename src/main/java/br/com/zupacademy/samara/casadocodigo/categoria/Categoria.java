@@ -21,4 +21,12 @@ public class Categoria {
     public Categoria(@NotBlank String nome) {
         this.nome = nome;
     }
+
+    public Long getId() {
+        return Id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
 }

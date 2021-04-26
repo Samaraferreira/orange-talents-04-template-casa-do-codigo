@@ -34,4 +34,15 @@ public class LivroController {
         return livros.stream().map(LivroResponse::new).collect(Collectors.toList());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<LivroDetalhesResponse> detalhe(@PathVariable Long id) {
+
+        Livro livro = entityManager.find(Livro.class, id);
+
+        if (livro == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(new LivroDetalhesResponse(livro));
+    }
 }
