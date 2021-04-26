@@ -7,6 +7,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import javax.validation.Valid;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/livros")
@@ -23,6 +25,13 @@ public class LivroController {
         entityManager.persist(livro);
 
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping
+    public List<LivroResponse> listar() {
+        List<Livro> livros = entityManager.createQuery("select l from Livro l").getResultList();
+
+        return livros.stream().map(LivroResponse::new).collect(Collectors.toList());
     }
 
 }
