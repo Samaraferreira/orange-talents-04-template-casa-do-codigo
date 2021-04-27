@@ -3,7 +3,7 @@ package br.com.zupacademy.samara.casadocodigo.livro;
 import br.com.zupacademy.samara.casadocodigo.autor.AutorDetalhesResponse;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class LivroDetalhesResponse {
 
@@ -13,7 +13,7 @@ public class LivroDetalhesResponse {
     private BigDecimal preco;
     private Integer numeroPaginas;
     private String isbn;
-    private LocalDate dataPublicacao;
+    private String dataPublicacao;
     private AutorDetalhesResponse autor;
 
     public LivroDetalhesResponse(Livro livro) {
@@ -23,7 +23,7 @@ public class LivroDetalhesResponse {
         this.preco = livro.getPreco();
         this.numeroPaginas = livro.getNumeroPaginas();
         this.isbn = livro.getIsbn();
-        this.dataPublicacao = livro.getDataPublicacao();
+        this.dataPublicacao = livro.getDataPublicacao().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         this.autor = new AutorDetalhesResponse(livro.getAutor());
     }
 
@@ -51,7 +51,7 @@ public class LivroDetalhesResponse {
         return isbn;
     }
 
-    public LocalDate getDataPublicacao() {
+    public String getDataPublicacao() {
         return dataPublicacao;
     }
 
