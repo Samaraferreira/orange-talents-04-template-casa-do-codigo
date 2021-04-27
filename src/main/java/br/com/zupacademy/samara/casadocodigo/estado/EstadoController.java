@@ -1,4 +1,4 @@
-package br.com.zupacademy.samara.casadocodigo.estado.pais;
+package br.com.zupacademy.samara.casadocodigo.estado;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,4 +1,4 @@
-package br.com.zupacademy.samara.casadocodigo.estado.pais;
+package br.com.zupacademy.samara.casadocodigo.estado;
 
 import br.com.zupacademy.samara.casadocodigo.pais.Pais;
 
